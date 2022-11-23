@@ -1,0 +1,13 @@
+version: 2.1
+
+jobs:
+  print-job:
+    docker:
+      - image: cimg/base:2022.04
+    steps:
+      - run: echo "Hello world from CircleCI!"
+
+workflows:
+  print-workflow:
+    jobs:
+      - print-job
